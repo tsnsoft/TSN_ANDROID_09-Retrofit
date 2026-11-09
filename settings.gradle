@@ -1,0 +1,4 @@
+plugins {
+    id 'org.gradle.toolchains.foojay-resolver-convention' version '1.0.0'
+}
+include  'TSN_DEMO_18_Retrofit2_MICRO', 'TSN_DEMO_18_Retrofit2_Rates'

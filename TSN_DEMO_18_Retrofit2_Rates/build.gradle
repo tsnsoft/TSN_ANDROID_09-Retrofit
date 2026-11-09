@@ -1,0 +1,29 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 37
+    defaultConfig {
+        applicationId "kz.talipovsn.retrofit_demo"
+        minSdkVersion 24
+        targetSdkVersion 37
+        versionCode 6
+        versionName "2026.1"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    namespace 'kz.talipovsn.retrofit_demo'
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation libs.appcompat.v170
+    implementation libs.retrofit.v290
+    implementation libs.converter.gson
+    implementation libs.recyclerview
+    implementation libs.material
+    implementation(platform(libs.kotlin.bom.v1822))
+}
